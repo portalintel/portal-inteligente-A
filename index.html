@@ -5,6 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Construindo o Futuro do Comércio - Portal Inteligente/A</title>
     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .modal-overlay {
+            display: none; /* Escondido por padrão */
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85); /* Fundo escuro transparente */
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-box {
+            background-color: #0f172a; /* Cor de fundo do seu site */
+            padding: 30px;
+            border-radius: 20px;
+            border: 2px solid var(--primary, #38bdf8);
+            width: 90%;
+            max-width: 450px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: #fff;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .modal-close:hover {
+            color: var(--primary, #38bdf8);
+        }
+
+        .modal-opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .btn-opcao-pacote {
+            display: block;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-opcao-pacote:hover {
+            background: rgba(56, 189, 248, 0.1);
+            border-color: var(--primary, #38bdf8);
+            transform: translateY(-2px);
+        }
+
+        .btn-opcao-destaque {
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            border: none;
+            font-weight: bold;
+        }
+
+        .btn-opcao-destaque:hover {
+            background: linear-gradient(90deg, #2ea8e6, #737df0);
+            transform: scale(1.03);
+        }
+    </style>
 </head>
 <body>
 
@@ -22,7 +101,7 @@
         <p>Não estamos apenas arrecadando fundos. Estamos fundando o ecossistema de <strong>inovação</strong> que vai automatizar, escalar e crescer o comércio da nossa região usando a união da Inteligência Artificial e humana.</p>
         
         <div style="margin: 40px 0 20px 0;">
-            <a href="https://pay.kiwify.com.br/sG62CQT" style="display: block; background: linear-gradient(90deg, #38bdf8, #818cf8); color: white; text-decoration: none; font-weight: bold; font-size: 1.5rem; padding: 25px; border-radius: 15px; text-align: center; box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3); transition: transform 0.3s ease;">
+            <a href="#" onclick="abrirModal(); return false;" style="display: block; background: linear-gradient(90deg, #38bdf8, #818cf8); color: white; text-decoration: none; font-weight: bold; font-size: 1.5rem; padding: 25px; border-radius: 15px; text-align: center; box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3); transition: transform 0.3s ease;">
                 🚀 CONCORRA A 1000 REAIS POR APENAS 16 REAIS! (Clique aqui) <br>
                 <span style="font-size: 1rem; opacity: 0.9;">🔥 QUANTO MAIS COMPRAR, MAIS CHANCES DE GANHAR!</span>
             </a>
@@ -65,7 +144,7 @@
                     <li><span>🥉 Roberto F.</span> <span>75 pts</span></li>
                 </ul>
             </div>
-            <a href="https://pay.kiwify.com.br/sG62CQT" class="btn-buy">Apoiar com R$ 16 & (Clique aqui)</a>
+            <a href="#" onclick="abrirModal(); return false;" class="btn-buy">Apoiar com R$ 16 & (Clique aqui)</a>
         </div>
 
         <div class="card">
@@ -100,6 +179,31 @@
     </div>
 </div>
 
+<div id="modalCompra" class="modal-overlay">
+    <div class="modal-box">
+        <span class="modal-close" onclick="fecharModal()">&times;</span>
+        <h2 style="color: white; margin-bottom: 10px;">Escolha o seu Pacote</h2>
+        <p style="color: var(--text-light); font-size: 0.95rem;">Quanto mais chances, maior a probabilidade de ganhar os R$ 1.000,00!</p>
+        
+        <div class="modal-opcoes">
+            <a href="https://pay.kiwify.com.br/3Ok5znq" class="btn-opcao-pacote">
+                🎟️ 1 Chance - <strong>R$ 16,00</strong>
+            </a>
+            
+            <a href="https://pay.kiwify.com.br/suHJYxD" class="btn-opcao-pacote">
+                🎟️ 3 Chances - <strong>R$ 45,00</strong>
+            </a>
+            
+            <a href="https://pay.kiwify.com.br/Yzom9Ya" class="btn-opcao-pacote">
+                🎟️ 5 Chances - <strong>R$ 70,00</strong>
+            </a>
+            
+            <a href="https://pay.kiwify.com.br/sCPcIrM" class="btn-opcao-pacote btn-opcao-destaque">
+                🔥 10 Chances - <strong>R$ 150,00</strong>
+            </a>
+        </div>
+    </div>
+</div>
 <footer style="text-align: center; padding: 40px 20px; margin-top: 50px; border-top: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.2);">
     <h3 style="color: white; margin-bottom: 20px;">Siga Nossas Redes Sociais</h3>
     
@@ -113,6 +217,26 @@
 
     <p style="color: var(--text-light); font-size: 0.9rem;">&copy; 2026 Portal Inteligente/A - Inovação e Automação.</p>
 </footer>
+
+<script>
+    // Função para abrir a janela
+    function abrirModal() {
+        document.getElementById('modalCompra').style.display = 'flex';
+    }
+
+    // Função para fechar a janela no X
+    function fecharModal() {
+        document.getElementById('modalCompra').style.display = 'none';
+    }
+
+    // Função para fechar se o usuário clicar fora da caixa
+    window.onclick = function(event) {
+        var modal = document.getElementById('modalCompra');
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
 
 <script src="script.js"></script>
 </body>
