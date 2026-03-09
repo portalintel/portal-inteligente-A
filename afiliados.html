@@ -10,7 +10,6 @@
 
 <div class="container">
     <header class="header" style="margin-top: 20px;">
-        
         <div class="nav-menu" style="margin-bottom: 50px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
             <a href="index.html" class="btn-nav" style="padding: 10px 20px; background: rgba(255,255,255,0.1); border-radius: 50px; text-decoration: none; color: white; border: 1px solid var(--primary); font-size: 0.9rem;">Página Inicial</a>
             <a href="afiliados.html" class="btn-nav" style="padding: 10px 20px; background: rgba(56, 189, 248, 0.2); border-radius: 50px; text-decoration: none; color: white; border: 1px solid var(--primary); font-size: 0.9rem; font-weight: bold;">Quero ser Afiliado</a>
@@ -38,28 +37,46 @@
             </div>
             <div class="step" style="background: rgba(15, 23, 42, 0.8); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1);">
                 <h4 style="color: var(--primary);">4. Prêmios Extras</h4>
-                <p>Além da comissão, os 3 melhores levam o bônus em dinheiro de cada meta!</p>
+                <p>Os 3 melhores do ranking dividem prêmios em dinheiro ao atingirmos cada meta!</p>
             </div>
         </div>
 
-        <div class="ranking" style="margin-top: 40px; background: rgba(15, 23, 42, 0.9); padding: 25px; border-radius: 15px; border: 1px solid var(--primary);">
-            <h3 style="text-align: center; color: var(--primary); margin-bottom: 20px;">Top Parceiros (5 pts por indicação)</h3>
-            <ul style="list-style: none; padding: 0; max-width: 300px; margin: 0 auto;">
-                <li style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
-                    <span>🥇 Carlos M.</span> <span>210 pts</span>
-                </li>
-                <li style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
-                    <span>🥈 Ana J.</span> <span>140 pts</span>
-                </li>
-                <li style="display: flex; justify-content: space-between; padding: 10px 0;">
-                    <span>🥉 Roberto F.</span> <span>75 pts</span>
-                </li>
-            </ul>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 40px;">
+            <div class="ranking" style="background: rgba(15, 23, 42, 0.9); padding: 25px; border-radius: 15px; border: 1px solid var(--primary);">
+                <h3 style="text-align: center; color: var(--primary); margin-bottom: 20px;">Top Parceiros (Pontuação)</h3>
+                <ul style="list-style: none; padding: 0; margin: 0 auto;">
+                    <li style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                        <span>🥇 Carlos M.</span> <span>210 pts</span>
+                    </li>
+                    <li style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                        <span>🥈 Ana J.</span> <span>140 pts</span>
+                    </li>
+                    <li style="display: flex; justify-content: space-between; padding: 10px 0;">
+                        <span>🥉 Roberto F.</span> <span>75 pts</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="premios-afiliado" style="background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(15, 23, 42, 0.9)); padding: 25px; border-radius: 15px; border: 2px solid #FFD700;">
+                <h3 style="text-align: center; color: #FFD700; margin-bottom: 20px;">💰 Premiação Final da Meta</h3>
+                <ul style="list-style: none; padding: 0; font-weight: bold;">
+                    <li style="display: flex; justify-content: space-between; padding: 10px 0; color: #FFD700; font-size: 1.2rem;">
+                        <span>1º LUGAR:</span> <span>R$ 300,00</span>
+                    </li>
+                    <li style="display: flex; justify-content: space-between; padding: 10px 0; color: #C0C0C0;">
+                        <span>2º LUGAR:</span> <span>R$ 250,00</span>
+                    </li>
+                    <li style="display: flex; justify-content: space-between; padding: 10px 0; color: #CD7F32;">
+                        <span>3º LUGAR:</span> <span>R$ 100,00</span>
+                    </li>
+                </ul>
+                <p style="font-size: 0.8rem; text-align: center; margin-top: 15px; opacity: 0.8;">*Prêmio pago via PIX após a conclusão da meta vigente.</p>
+            </div>
         </div>
 
         <div style="text-align: center; margin-top: 50px;">
             <a href="https://dashboard.kiwify.com/join/affiliate/4u3ciuTd" target="_blank" style="display: inline-block; padding: 20px 40px; background: var(--primary); color: white; text-decoration: none; border-radius: 15px; font-size: 1.2rem; font-weight: bold; border: 2px solid white; box-shadow: 0 10px 20px rgba(56, 189, 248, 0.4); transition: transform 0.3s ease;">
-                💰 QUERO ME AFILIAR AGORA E GANHAR 20% (Clique Aqui)
+                💰 QUERO ME AFILIAR AGORA E GANHAR 20% + PRÊMIOS
             </a>
         </div>
     </section>
